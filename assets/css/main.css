@@ -72,6 +72,40 @@ input, select, textarea {
 	appearance: none;
 }
 
+button.collapsible {
+	display: flex;               /* Use flexbox for alignment */
+	justify-content: left;     /* Center content horizontally */
+	align-items: center;         /* Center content vertically */
+	width: 100%;                 /* Make button take full width */
+/*	background-color: #333; */      /* Adjust background color */
+/*	color: white;         */       /* Adjust text color */
+	font-size: 1.25rem;          /* Adjust font size */
+	padding: 15px;               /* Adjust spacing around the text */
+	border: none;                /* Remove border for a clean look */
+	outline: none;               /* Remove focus outline */
+	cursor: pointer;             /* Change cursor on hover */
+	transition: background-color 0.3s ease; /* Add hover effect */
+  }
+  
+  button.collapsible:hover {
+	 background-color: #555;     /* Highlight on hover */
+  } 
+  
+  button.collapsible:focus {
+	outline: 2px solid #888;     /* Accessible focus indicator */
+  }
+  
+  .content-section {
+	display: none;               /* Hide content initially */
+	padding: 20px;               /* Add spacing inside the section */
+	background-color: #f9f9f9;   /* Light background for content */
+	border-top: 1px solid #ddd;  /* Separator line */
+  }
+  
+  button.collapsible.active + .content-section {
+	display: block;              /* Show content when button is active */
+  }
+
 /* Basic */
 
 	@-ms-viewport {
