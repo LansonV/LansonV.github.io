@@ -15,6 +15,11 @@
 		<title>Lanson Van Dyke</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!-- Preconnect to external domains -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<!-- Preload critical fonts -->
+		<link rel="preload" href="https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900" as="style">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -25,7 +30,7 @@
 
 				<!-- Intro -->
 					<div id="intro">
-						<h1 style="color:black">Hi, I'm Lanson<br />Van Dyke
+						<h1 style="color:black">Lanson<br />Van Dyke
 
 						</h1>
 						<p style="color:black">Swimming • Survivor Fanatic • Scrabble</a></p>
@@ -46,6 +51,7 @@
 							<li class="active"><a href="index.html">Home</a></li>
 							<li><a href="aboutme.html">About Me</a></li>
 							<li><a href="portfolio.html">Portfolio</a></li>
+							<li><a href="blog">Blog</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/lanson/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -57,6 +63,24 @@
 				<!-- Main -->
 				<div id="main">
 					<div class="section-container">
+						<button class="collapsible">Blog</button>
+						<div class="content-section">
+							<section class="posts">
+								<article>
+									<header>
+										<h2><a href="blog/cursor-ai-website-evolution.html">Evolving My Website with Cursor AI</a></h2>
+										<p class="post-meta">May 7, 2025 in Technology</p>
+									</header>
+									<p>As someone who loves solving problems and driving efficiency, I'm always looking for ways to improve my workflow. Recently, I discovered Cursor AI, an intelligent code editor that promised to revolutionize how I work with code.</p>
+									<ul class="actions special">
+										<li><a href="blog/cursor-ai-website-evolution.html" class="button">Read More</a></li>
+									</ul>
+								</article>
+							</section>
+						</div>
+					</div>
+
+					<div class="section-container">
 						<button class="collapsible">Survivor Audition Tapes</button>
 						<div class="content-section">
 							<section class="posts">
@@ -64,28 +88,36 @@
 									<header>
 										<h2>4th Audition Tape</h2>
 									</header>
-									<iframe width="420" height="345" src="https://www.youtube.com/embed/vb1X-XYWcqI"></iframe>
+									<div class="video-container">
+										<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/vb1X-XYWcqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<p>Dec 2, 2024. Still didn't receive a nibble, so I'm going to try out a few different styles until I find what works. I figured I'd try to do some long action shots, change my pitch, and embed videos to squeeze in extra information.</p>
 								</article>
 								<article>
 									<header>
 										<h2>3rd Audition Tape</h2>
 									</header>
-									<iframe width="420" height="345" src="https://www.youtube.com/embed/5Gkj53PN70o"></iframe>
+									<div class="video-container">
+										<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/5Gkj53PN70o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<p>June 5th, 2024. Now that I'm no longer living in the basement unit, I had some fun filming in various locations in the new crib. </p>
 								</article>
 								<article>
 									<header>
 										<h2>2nd Audition Tape</h2>
 									</header>
-									<iframe width="420" height="345" src="https://www.youtube.com/embed/DREEG5db07o"></iframe>
+									<div class="video-container">
+										<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/DREEG5db07o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<p>October 25th, 2023. Let's switch it up! I didn't get a nibble from my first audition tape, so I might as well keep trying!</p>
 								</article>
 								<article>
 									<header>
 										<h2>1st Audition Tape</h2>
 									</header>
-									<iframe width="420" height="345" src="https://www.youtube.com/embed/vE0UQUbz7IE"></iframe>
+									<div class="video-container">
+										<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/vE0UQUbz7IE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<p>June 15th, 2023. One day I'm going to become the Sole Survivor. Check out my 1st audition tape!</p>
 								</article>
 							</section>
@@ -100,70 +132,90 @@
 									<header>
 										<h2>1-1 Icebreaker</h2>
 									</header>
-									<iframe width="420" height="345" src="https://www.youtube.com/embed/AZZfCzpQBp8"></iframe>
+									<div class="video-container">
+										<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/AZZfCzpQBp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<p>This is my introductory icebreaker speech and the start of my public speaking journey.</p>
 								</article>
 								<article>
 									<header>
 										<h2>1-2 The Power of Credit Cards</h2>
 									</header>
-									<iframe width="420" height="345" src="https://www.youtube.com/embed/I4R51GB7N_M"></iframe>
+									<div class="video-container">
+										<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/I4R51GB7N_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<p></p>
 								</article>
 								<article>
 									<header>
 										<h2>1-3 Effective Body Language</h2>
 									</header>
-									<iframe width="420" height="345" src="https://www.youtube.com/embed/ul1h-pmLJjU"></iframe>
+									<div class="video-container">
+										<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/ul1h-pmLJjU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<p></p>
 								</article>
 								<article>
 									<header>
 										<h2>1-4 If You Can't Beat Them, Join Them</h2>
 									</header>
-									<iframe width="420" height="345" src="https://www.youtube.com/embed/6AAasxDZysY"></iframe>
+									<div class="video-container">
+										<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6AAasxDZysY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<p></p>
 								</article>
 								<article>
 									<header>
 										<h2>1-5 If You Can't Beat Them, Join Them - Pt. 2</h2>
 									</header>
-									<iframe width="420" height="345" src="https://www.youtube.com/embed/pZwmeq9V_C8"></iframe>
+									<div class="video-container">
+										<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/pZwmeq9V_C8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<p></p>
 								</article>
 								<article>
 									<header>
 										<h2>2-1 Effective Body Language</h2>
 									</header>
-									<iframe width="420" height="345" src="https://www.youtube.com/embed/JK10CwYgzRM"></iframe>
+									<div class="video-container">
+										<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/JK10CwYgzRM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<p></p>
 								</article>
 								<article>
 									<header>
 										<h2>2-2 Understanding My Communication Style</h2>
 									</header>
-									<iframe width="420" height="345" src="https://www.youtube.com/embed/_fQqAVhJ8fg"></iframe>
+									<div class="video-container">
+										<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/_fQqAVhJ8fg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<p></p>
 								</article>
 								<article>
 									<header>
 										<h2>2-3 Mentors</h2>
 									</header>
-									<iframe width="420" height="345" src="https://www.youtube.com/embed/j2MzyOqshJA"></iframe>
+									<div class="video-container">
+										<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/j2MzyOqshJA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<p></p>
 								</article>
 								<article>
 									<header>
 										<h2>3-1 Swimming, The Life Long Sport</h2>
 									</header>
-									<iframe width="420" height="345" src="https://www.youtube.com/embed/1rpc4M-tGkA"></iframe>
+									<div class="video-container">
+										<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/1rpc4M-tGkA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<p></p>
 								</article>
 								<article>
 									<header>
 										<h2>3-2 Sole Survivor Champion</h2>
 									</header>
-									<iframe width="420" height="345" src="https://www.youtube.com/embed/joOpueYF2Gw"></iframe>
+									<div class="video-container">
+										<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/joOpueYF2Gw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 									<p></p>
 								</article>
 							</section>
@@ -178,7 +230,7 @@
 									<header>
 										<h2>Insights</h2>
 									</header>
-									<a href="portfolio/Insights.html" class="image fit"><img src="images/ins1.png" alt="" /></a>
+									<a href="portfolio/Insights.html" class="image fit"><img src="images/ins1.png" alt="" loading="lazy" /></a>
 									<p>Insights is a mobile platform that delivers insights to the manager to identify coaching opportunities 
 										and wins for their team. As product manager for Insights, I brought my operations experience to help deliver a beta product
 										for Bell's field services team.</p>
@@ -190,7 +242,7 @@
 									<header>
 										<h2>Innis College<br />Student Society</h2>
 									</header>
-									<a href="/portfolio/ICSS.html" class="image fit"><img src="images/ICSS.png" alt="" /></a>
+									<a href="/portfolio/ICSS.html" class="image fit"><img src="images/ICSS.png" alt="" loading="lazy" /></a>
 									<p>I was the 2017-2018 Innis College Student College Grad Rep. I established and oversaw a $15K budget to initiate, finance, plan, execute, and communicate events designated for 2018 graduating class size of 400 students.</p>
 									<ul class="actions special">
 										<li><a href="/portfolio/ICSS.html" class="button">Read More</a></li>
@@ -200,7 +252,7 @@
 									<header>
 										<h2>Bed Races</h2>
 									</header>
-									<a href="/portfolio/BedRaces.html" class="image fit"><img src="images/Bed Racing.jpeg" alt="" /></a>
+									<a href="/portfolio/BedRaces.html" class="image fit"><img src="images/Bed Racing.jpeg" alt="" loading="lazy" /></a>
 									<p>As an orientation leader, I was appointed to spearhead a new frosh event with a budget of $500.
 										This ended up becoming one of the most popular orientation events.</p>
 									<ul class="actions special">
@@ -256,7 +308,7 @@
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Lanson Van Dyke 2023</li></ul>
+						<ul><li>&copy; Lanson Van Dyke 2025</li></ul>
 					</div>
 
 			</div>

@@ -74,37 +74,36 @@ input, select, textarea {
 
 button.collapsible {
 	display: flex;               /* Use flexbox for alignment */
-	justify-content: left;     /* Center content horizontally */
+	justify-content: center;     /* Center content horizontally */
 	align-items: center;         /* Center content vertically */
 	width: 100%;                 /* Make button take full width */
-/*	background-color: #333; */      /* Adjust background color */
-/*	color: white;         */       /* Adjust text color */
 	font-size: 1.25rem;          /* Adjust font size */
 	padding: 15px;               /* Adjust spacing around the text */
 	border: none;                /* Remove border for a clean look */
 	outline: none;               /* Remove focus outline */
 	cursor: pointer;             /* Change cursor on hover */
 	transition: background-color 0.3s ease; /* Add hover effect */
-  }
-  
-  button.collapsible:hover {
-	 background-color: #555;     /* Highlight on hover */
-  } 
-  
-  button.collapsible:focus {
-	outline: 2px solid #888;     /* Accessible focus indicator */
-  }
-  
-  .content-section {
-	display: none;               /* Hide content initially */
-	padding: 20px;               /* Add spacing inside the section */
-	background-color: #f9f9f9;   /* Light background for content */
-	border-top: 1px solid #ddd;  /* Separator line */
-  }
-  
-  button.collapsible.active + .content-section {
-	display: block;              /* Show content when button is active */
-  }
+}
+
+	button.collapsible:hover {
+		background-color: #555;     /* Highlight on hover */
+	} 
+	
+	button.collapsible:focus {
+		outline: 2px solid #888;     /* Accessible focus indicator */
+	}
+	
+	.content-section {
+		display: none;               /* Hide content initially */
+		padding: 20px;               /* Add spacing inside the section */
+		background-color: #f9f9f9;   /* Light background for content */
+		border-top: 1px solid #ddd;  /* Separator line */
+		width: 100%;                 /* Make content section full width */
+	}
+	
+	button.collapsible.active + .content-section {
+		display: block;              /* Show content when button is active */
+	}
 
 /* Basic */
 
@@ -3414,8 +3413,11 @@ button.collapsible {
 /* Intro */
 
 	#intro {
+		background: rgba(255, 255, 255, 0.2);  /* Add semi-transparent white background */
+		padding: 2rem;                         /* Add some padding around the text */
+		border-radius: 8px;                    /* Optional: round the corners */
+		margin: 2rem 0;                        /* Add some margin */
 		color: #ffffff;
-		padding: 8rem 4rem 6rem 4rem ;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -3449,7 +3451,7 @@ button.collapsible {
 
 		#intro a {
 			color: #ffffff;
-			border-bottom-color: rgba(255, 255, 255, 0.5);
+			border-bottom-color: rgba(255, 255, 255, 0.2);
 		}
 
 			#intro a:hover {
@@ -3516,15 +3518,15 @@ button.collapsible {
 				}
 
 		#intro h1 {
-			font-size: 5rem;
-			line-height: 1;
+			font-size: 4rem;
+			line-height: 1.1;
+			margin: 0 0 2rem 0;
 		}
 
 		#intro p {
 			font-size: 1.25rem;
-			font-style: italic;
-			margin-top: -0.25rem;
-			text-align: center;
+			line-height: 1.5;
+			margin: 0 0 1.5rem 0;
 		}
 
 		#intro + #header {
@@ -3992,11 +3994,11 @@ button.collapsible {
 			}
 
 			#main > .posts > article {
-				border-color: #eeeeee;
-				border-left-width: 2px;
-				border-style: solid;
-				border-top-width: 2px;
-				text-align: center;
+				background: rgba(255, 255, 255, 0.9);  /* Add semi-transparent white background */
+				padding: 2rem;                         /* Add padding around content */
+				border-radius: 8px;                    /* Round the corners */
+				margin: 2rem 0;                        /* Add margin between posts */
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
 			}
 
 				#main > .posts > article > :last-child {
@@ -4004,11 +4006,11 @@ button.collapsible {
 				}
 
 				#main > .posts > article:nth-child(2n - 1) {
-					border-left-width: 0;
+					background: rgba(255, 255, 255, 0.95); /* Slightly different opacity for alternating posts */
 				}
 
 				#main > .posts > article:nth-child(-n + 2) {
-					border-top-width: 0;
+					margin-top: 0;
 				}
 
 			@media screen and (max-width: 980px) {
@@ -4817,3 +4819,41 @@ button.collapsible {
 		}
 
 	}
+
+.section-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	margin: 2rem 0;
+}
+
+/* YouTube video container styling */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;  /* Maximum width for larger screens */
+    margin: 0 auto;    /* Center the container */
+    padding: 20px 0;   /* Add some vertical spacing */
+}
+
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16/9;  /* Maintain video aspect ratio */
+    border: none;
+    border-radius: 8px;  /* Optional: round the corners */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 980px) {
+    .video-container {
+        max-width: 90%;  /* Slightly smaller on medium screens */
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .video-container {
+        max-width: 100%;  /* Full width on mobile */
+        padding: 10px 0;
+    }
+}
