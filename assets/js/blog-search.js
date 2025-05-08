@@ -5,6 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Sample blog posts data (this would typically come from a database or JSON file)
     const blogPosts = [
         {
+            title: 'Attending My First Toastmasters District Conference',
+            excerpt: "This past weekend marked a significant milestone in my public speaking journey as I attended my first Toastmasters District Conference. The experience was nothing short of transformative, and I'm excited to share the insights and lessons I gained from this incredible event.",
+            date: '2025-05-08',
+            category: 'Professional, Communication, Toastmasters',
+            url: 'toastmasters-district-conference.html'
+        },
+        {
             title: 'Evolving My Website with Cursor AI',
             excerpt: "As someone who loves solving problems and driving efficiency, I'm always looking for ways to improve my workflow. Recently, I discovered Cursor AI, an intelligent code editor that promised to revolutionize how I work with code.",
             date: '2025-05-07',

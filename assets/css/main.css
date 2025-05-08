@@ -4857,3 +4857,34 @@ button.collapsible {
         padding: 10px 0;
     }
 }
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0;
+  background: rgba(255,255,255,0);
+  color: #212931;
+  border: 1.5px solid #111;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: color 0.2s, border-color 0.2s, background 0.2s, box-shadow 0.2s, transform 0.1s;
+  z-index: 10;
+}
+.close-btn:hover, .close-btn:focus {
+  color: #e53935;
+  border-color: #e53935;
+  outline: none;
+  background: rgba(33, 191, 239, 0.12); /* subtle blue highlight */
+  box-shadow: 0 0 0 4px rgba(33,191,239,0.18);
+  transform: scale(1.08);
+}
