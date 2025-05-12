@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>How You Can Use AI to Run a Survivor Fantasy Pool - Lanson Van Dyke</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<link rel="icon" type="image/png" href="../images/favicon.png">
+		<style>
+			ul, ol {
+				list-style-position: inside;
+				padding-left: 0;
+				text-align: left;
+			}
+			ul li, ol li {
+				margin-bottom: 0.5em;
+				text-align: left;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="../aboutme.html">About Me</a></li>
+							<li><a href="../portfolio.html">Portfolio</a></li>
+							<li class="active"><a href="index.html">Blog</a></li>
+							<li><a href="../toastmasters.html">Toastmasters</a></li>
+							<li><a href="../survivor-auditions.html">Survivor Auditions</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/lanson/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:lansonvd@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<button class="close-btn" onclick="window.history.back()" aria-label="Close">&times;</button>
+						<article class="post featured">
+							<header class="major">
+								<h2>How You Can Use AI to Run a Survivor Fantasy Pool</h2>
+								<p class="post-meta">Posted on <time datetime="2025-05-12">May 12, 2025</time> in <a href="category/survivor.html">Survivor</a>, <a href="category/fantasy.html">Fantasy</a>, <a href="category/artificial-intelligence.html">Artificial Intelligence</a>, <a href="category/technology.html">Technology</a></p>
+							</header>
+							<div class="image main"><img src="../images/blog/survivor-ai-fantasy.png" alt="Survivor Fantasy Pool with AI" /></div>
+							
+							<h2>Co-Pilot Your Commmissioner Duties!</h2>
+                        
+                            
+                            <p>I'm in my second season running a Survivor fantasy pool, and just like the game itself, I decided to raise the stakes. Our pool doubled in size, and I had to rethink how I managed everything—sharing scoring updates, keeping the system sustainable, and making sure it could scale in the future. That's when I turned to a few trusted allies: ChatGPT and Claude.</p>
+
+                            <h2>The Challenges I Had to Solve</h2>
+                            <p>Last season's setup got the job done. Team picks were sent to me by text, I entered them into Excel using some basic <code>SUMIF</code> formulas, and I'd share scoring updates as screenshots in a group iMessage chat with a bit of commentary. But with more people involved this time around, I knew I needed something smarter, faster, and more fun.</p>
+
+                            <p>Here's how I reworked the entire experience.</p>
+
+                            <h2>Moving from iMessage to WhatsApp</h2>
+                            <p>One of the first changes I made was switching our group chat to WhatsApp. This ensured we weren't excluding anyone based on their device. WhatsApp also makes it easy to organize conversations. I set up two separate channels: one for official updates and rules, and another for memes, smack talk, and casual chat.</p>
+
+                            <h2>Automating Team Submissions with Google Forms</h2>
+                            <p>Manually inputting team names every season wasn't going to cut it anymore. I built a Google Form where players could submit their teams based on the cast of the current season. Using a few Sheets formulas, I linked the form to our scoring system so submissions would automatically update the spreadsheet.</p>
+
+                            <p>When the merge rolled around and teams were allowed to add an extra player, I created a second form to handle those updates too. No more manual entry needed.</p>
+
+                            <h2>Upgrading Google Sheets</h2>
+                            <p>My original scoring spreadsheet worked, but it needed improvements to support a bigger league. I made the scoring table more compact so it could fit into a single screenshot, and I created formulas that could be reused season after season without needing a full overhaul.</p>
+
+                            <p>One of the trickier challenges was connecting the Google Form responses to the main scoring chart. I used functions like <code>QUERY</code>, <code>VLOOKUP</code>, and <code>FLATTEN</code> to pull in data and organize it properly. It took some trial and error, but ChatGPT helped me figure out a final structure that worked well.</p>
+
+                            <p>I also had to adjust the scoring logic once the merge happened. At that point, teams could add one new player, and I needed to ensure that player's points only counted from that episode onward. I changed the format of my data to make this possible and built a formula that calculated everything in one place:</p>
+
+                            <pre><code>=SUMIFS('Fantasy Data'!$C:$C, 'Fantasy Data'!$B:$B,H$1, 'Fantasy Data'!$A:$A, "&lt;7") * COUNTIF(FLATTEN(SPLIT(VLOOKUP($C2,Form_Responses1[[#ALL],[What is your team name?]:[Formula]], 6, FALSE),", ")),H$1) + 
+                        SUMIFS('Fantasy Data'!$C:$C,'Fantasy Data'!$B:$B,H$1,'Fantasy Data'!$A:$A,"&gt;6") * COUNTIF(FLATTEN(SPLIT(VLOOKUP($C2,Form_Responses2[[#ALL],[What is your team name?]:[Formula]], 4, FALSE),", ")),H$1)</code></pre>
+
+                            <p>It's long, but it gets the job done.</p>
+
+                            <h2>Adding Flair with AI Commentary</h2>
+                            <p>One of the most important parts of running the pool is keeping it fun. I wanted weekly updates to be more than just numbers—I wanted commentary with some flavor. But writing that every week takes time. That's where ChatGPT came in.</p>
+
+                            <p>I gave it a prompt like this:</p>
+                            <blockquote>
+                            <p>"You are a commissioner for a competitive fantasy Survivor league. Provide commentary on the latest scoring update with light banter. The first screenshot shows the current total scores and most recent episode scores. The MVP column shows each team's winner pick. The second screenshot shows how many points each Survivor scored this week."</p>
+                            </blockquote>
+
+                            <p>For weekly updates, I'd give it details like:</p>
+                            <blockquote>
+                            <p>"Star was voted out. Kyle won the individual reward. Joe won immunity."</p>
+                            </blockquote>
+
+                            <p>If the reply was too bland or too long, I'd ask for something sassier, more concise, or full of emojis. Once I had something I liked, I shared it with the league through WhatsApp. I also used the AI assistant to build hype for upcoming episodes. It would remind everyone to tune in and give us a reason to root for—or against—certain players. (Sorry Kamilla and Mitch, I needed your downfall to catch up in the standings.)</p>
+
+                            <h2>A Look at the Evolution</h2>
+                            <p>Here's where we started and ended up:</p>
+                            <ul>
+                            <li><a href="https://docs.google.com/spreadsheets/d/1uO04RLZ3MUkMHNY7MHLHk9s6nyBgG74X1Uq0dSTaASc/edit?gid=0#gid=0" target="_blank">Season 1 Spreadsheet</a></li>
+                            <li><a href="https://docs.google.com/spreadsheets/d/1vIePMB7C8dfULyIfnSuFkOAqgQEaIyaEOGxOlNeXIGY/edit?resourcekey=&gid=963874529" target="_blank">Current Season Spreadsheet</a></li>
+                            <li><strong>Season 47 Scoring Update Example:</strong><br>
+                              <img src="../images/blog/2025-survivor-before.png" alt="Fantasy Survivor Old Update" style="max-width: 100%; margin-top: 0.5em;" /><br>
+                              <em>A sample update sent to the league, with no commentary to go with it.</em>
+                            </li>
+                            <li><strong>Season 48 Scoring Update Example:</strong><br>
+                              <img src="../images/blog/2025-survivor-after.png" alt="Survivor Fantasy New Example" style="max-width: 100%; margin-top: 0.5em;" /><br>
+                              <em>A sample update sent to the league, with commentary to go with it.</em>
+                            </li>
+                            </ul>
+
+                            <p>It's a big step up—from static screenshots to dynamic sheets and AI-powered storytelling.</p>
+
+                            <h2>What's Next?</h2>
+                            <p>There's still room to grow, and I've got a few ideas in the works:</p>
+                            <ul>
+                            <li><strong>Champion's Cup:</strong> A virtual trophy that lists each season's winner, their MVP, and their final score.</li>
+                            <li><strong>End-of-Season Survey:</strong> I created a Google Form to collect feedback on what worked, what didn't, and what players want to see next season.</li>
+                            <li><strong>Buy-In:</strong> A small entry fee to support fun prizes or a physical trophy.</li>
+                            <li><strong>Mini Awards:</strong> Fun categories like "Best Meme" or "Most Dramatic Meltdown."</li>
+                            </ul>
+
+                            <p>I'm not sure how many of these I'll implement, but I love watching this little Survivor community grow. Whether it's strategizing, trash-talking, or cheering on our MVPs, we're all here for the greatest reality TV show on Earth.</p>
+
+                            <p>If you've got ideas, want to swap strategies, or are curious about setting up a Survivor fantasy pool of your own, feel free to reach out — I'd love to hear from you. You can contact me at <a href="mailto:lansonvd@gmail.com">lansonvd@gmail.com</a>. Let's make next season even better.</p>
+
+                            </article>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:lansonvd@gmail.com">lansonvd@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/lanson/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Lanson Van Dyke 2025</li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+	</body>
+</html> 

@@ -18,6 +18,20 @@ document.addEventListener('DOMContentLoaded', function() {
             category: 'Technology',
             url: 'cursor-ai-website-evolution.html'
         },
+        {
+            title: 'How You Can Use AI to Run a Survivor Fantasy Pool',
+            excerpt: "I decided to commission a Survivor Fantasy pool, and I turned to AI to support this time consuming endeavour. Running a fantasy pool for Survivor can be incredibly fun, but it also comes with its fair share of administrative challenges.",
+            date: '2025-05-12',
+            category: 'Survivor, Fantasy, Artificial Intelligence, Technology',
+            url: 'survivor-ai-fantasy-pool.html'
+        },
+        {
+            title: 'How I Meal Prep For the Week',
+            excerpt: "Meal prepping is my secret weapon for saving time, eating healthier, and reducing stress during the week. Here's how I plan, shop, and cook in advance to make my week smoother and more delicious.",
+            date: '2025-05-13',
+            category: 'Meal Prep, Lifestyle',
+            url: 'how-i-meal-prep-for-the-week.html'
+        },
         // {
         //     title: 'Coming Soon',
         //     excerpt: "I'm working on my first blog post. Stay tuned!",
