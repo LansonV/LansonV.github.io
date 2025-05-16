@@ -32,6 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
             category: 'Meal Prep, Lifestyle',
             url: 'how-i-meal-prep-for-the-week.html'
         },
+        {
+            title: 'I Signed Up for an Olympic Triathlon',
+            excerpt: "After completing my first marathon earlier this year, I've decided to take on an even bigger challenge: an Olympic-distance triathlon. This decision represents a significant step up in my athletic journey, combining three disciplines I've been passionate about individually.",
+            date: '2025-05-15',
+            category: 'Triathlon, Fitness, Swimming, Biking, Running',
+            url: 'i-signed-up-for-an-olympic-triathlon.html'
+        },
         // {
         //     title: 'Coming Soon',
         //     excerpt: "I'm working on my first blog post. Stay tuned!",
