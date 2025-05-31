@@ -50,7 +50,18 @@
 
 				<!-- Main -->
 					<div id="main">
-						<button class="close-btn" onclick="window.history.back()" aria-label="Close">&times;</button>
+						<button class="close-btn" onclick="goBack()">&times;</button>
+						 <script>
+    function goBack() {
+      if (document.referrer && document.referrer !== window.location.href) {
+        // Go back if there's a referring page that's not the current page
+        window.history.back();
+      } else {
+        // Otherwise, go to home page
+        window.location.href = '/';
+      }
+    }
+  </script>
 						<article class="post featured">
 							<header class="major">
 								<h2>How I Meal Prep For the Week</h2>
