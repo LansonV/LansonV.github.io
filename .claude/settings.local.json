@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs sed -i '' 's/&copy; Lanson Van Dyke 2025/\\\\&copy; Lanson Van Dyke 2026/g')"
+    ]
+  }
+}
